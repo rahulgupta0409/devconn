@@ -1,4 +1,4 @@
-package main
+package mongoconn
 
 import (
 	"context"
@@ -63,8 +63,4 @@ var DB *mongo.Client = ConnectDB()
 func GetCollection(client *mongo.Client, databaseName, collectionName string) *mongo.Collection {
 	collection := client.Database(databaseName).Collection(collectionName)
 	return collection
-}
-
-func main() {
-	Readyaml("rahul.yaml")
 }
